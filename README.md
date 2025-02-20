@@ -89,35 +89,7 @@ npm i @moojor224/jsonschema2mk
 </table>
 
 
-### Internal Feature Extensions (Option extension)
-
-You can load feature extensions if needed.
-
-Implemented Extensions:
-
-  * `table-format-2`: Show tables with the columns *name*, *type*, *title*, *description* and *required*. Default is to display a combined *name* and *title* column. See [example output](test/010-example-artnet-table2.md).
-  * `yaml-examples`: Show examples in YAML format.
-  * `front-matter`: Add a [front matter block](https://jekyllrb.com/docs/front-matter/).<br/>You can define the front-matter with `--fm.para1 value1 --fm.para2 value2`
-
-Example Calls:
-
-```sh
-# table-format 2
-npx jsonschema2mk --schema schema.json \
-	--extension table-format-2 >DOC.md
-# yaml-examples
-npx jsonschema2mk --schema schema.json \
-	--extension yaml-examples >DOC2.md
-# yaml-examples and front matter
-npx jsonschema2mk --schema schema.json \
-	--extension yaml-examples \
-	--extension front-matter --fm.parent Reference --fm.nav_order 1 >DOC3.md
-```
-
-
 ### Load External Plugins (Option plugin)
-
-If partial overwriting is not enogh (see above), you can load plugins.
 
 In the plugin, you can load your own partials. It has the same API as extensions.
 
@@ -132,17 +104,10 @@ module.exports = function(data, jsonschema2mk) {
 ```
 
 
-Call it via:
-
-```sh
-npx jsonschema2mk --schema schema.json --plugin my-plugin.js >DOC.md
-```
-
-
 
 ## Usage as Libray
 
-You can integration this code as Library. See `cli.js` for an example.
+You can integration this code as Library.
 
 ```js
 const jsonschema2mk = require("jsonschema2mk");
@@ -157,7 +122,7 @@ const jsm = new jsonschema2mk({
 const output = jsm.convert(schema);
 ```
 
-Options see [CLI options](#command-line-options)
+Options
 
 <table>
   <thead>
