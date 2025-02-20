@@ -53,42 +53,9 @@ Examples:
 ## Install & Usage
 
 ```sh
-npm install jsonschema2mk
+npm i @moojor224/jsonschema2mk
 ```
 
-Generate DOC.md:
-
-```sh
-npx jsonschema2mk --schema schema.json >DOC.md
-```
-
-Overwrite some partials with own partials:
-
-```sh
-npx jsonschema2mk --schema schema.json --partials dir/ >DOC.md
-```
-
-## Add to your project
-
-Add to package.json:
-
-```json
-{
-	"scripts": {
-		"doc": "jsonschema2mk --schema schema.json >DOC.md"
-	}
-}
-```
-
-and run `npm run doc`.
-
-## Command line options
-
-Usage:
-
-```sh
-npx jsonschema2mk [<options>] >DOC.md
-```
 
 <table>
   <thead>

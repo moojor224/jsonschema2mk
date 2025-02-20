@@ -1,26 +1,25 @@
 {
-  "name": "jsonschema2mk",
-  "version": "2.0.0",
-  "description": "JSON schema to markdown generator",
-  "main": "index.js",
-  "bin": "cli.js",
-  "dependencies": {
-    "explain-json-schema": "^1.1.1",
-    "handlebars": "^4.7.7",
-    "js-yaml": "^4.1.0",
-    "minimist": "^1.2.6"
-  },
-  "devDependencies": {
-    "tape": "^5.6.3"
-  },
-  "homepage": "https://github.com/simonwalz/jsonschema2mk",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/simonwalz/jsonschema2mk.git"
-  },
-  "scripts": {
-    "test": "./test/test.sh && tape *.test.js"
-  },
-  "author": "Simon Walz",
-  "license": "MIT"
+    "name": "@moojor224/jsonschema2mk",
+    "private": false,
+    "version": "2.0.0",
+    "description": "JSON schema to markdown generator",
+    "main": "dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "dependencies": {
+        "explain-json-schema": "^1.1.1",
+        "handlebars": "^4.7.7",
+        "js-yaml": "^4.1.0",
+        "tsup": "^8.3.6",
+        "typescript": "^5.7.3"
+    },
+    "homepage": "https://github.com/moojor224/jsonschema2mk",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/moojor224/jsonschema2mk.git"
+    },
+    "scripts": {
+        "build": "tsup"
+    },
+    "license": "MIT"
 }
