@@ -93,11 +93,11 @@ export const type = `{{#if (noproperties .)}}
 
 {{#each oneOf}}
  {{br}}
-**Option {{plus @key 1}} (alternative):** {{> element_part . type=(or type ../type) path=(pathjoin path (plus "Option " (plus (plus @key 1) ": ")))}}
+## Option {{plus @key 1}} (alternative): {{> element_part . type=(or type ../type) path=(pathjoin path (plus "Option " (plus (plus @key 1) ": ")))}}
 {{/each}}
 {{#each anyOf}}
  {{br}}
-**Option {{plus @key 1}} (optional):** {{> element_part . type=(or type ../type) path=(pathjoin path (plus "Option " (plus (plus @key 1) "]: ")))}}
+## Option {{plus @key 1}} (optional): {{> element_part . type=(or type ../type) path=(pathjoin path (plus "Option " (plus (plus @key 1) "]: ")))}}
 {{/each}}
 {{#each allOf}}
  {{br}}
@@ -139,7 +139,7 @@ export const simple = `{{~#if (isdefined type)}}
 {{> extra .}}
 `;
 export const object = `{{#if (length properties) ~}}
-**{{prefix_text}}Properties**
+### {{prefix_text}}Properties
 
 {{> object_property_header}}
 {{#each properties ~}}
@@ -148,7 +148,7 @@ export const object = `{{#if (length properties) ~}}
 
 {{/if}}
 {{#if (length patternProperties) ~}}
-**{{prefix_text}}Properties (Pattern)**
+### {{prefix_text}}Properties (Pattern)
 
 {{> object_property_header}}
 {{#each patternProperties ~}}
