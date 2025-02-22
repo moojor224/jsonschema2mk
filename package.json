@@ -1,7 +1,7 @@
 {
     "name": "@moojor224/jsonschema2mk",
     "private": false,
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "JSON schema to markdown generator",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
